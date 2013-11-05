@@ -4,22 +4,22 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
 	version="2.1">
-
 	<application>
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
-		<variable-resolver>org.springframework.web.jsf.DelegatingVariableResolver</variable-resolver>
 	</application>
 	<managed-bean>
-		<managed-bean-name>webController</managed-bean-name>
-		<managed-bean-class>com.sarvatra.web.WebController</managed-bean-class>
+		<managed-bean-name>loginBean</managed-bean-name>
+		<managed-bean-class>com.sarvatra.smui.web.managedbean.LoginMBean</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 		<managed-property>
-			<property-name>mainController</property-name>
-			<value>#{mainController}</value>
+		    <property-name>securityHelper</property-name>
+		    <value>#{securityHelper}</value>
+		    <property-name>securityService</property-name>
+		    <value>#{securityService}</value>
 		</managed-property>
 	</managed-bean>
 	<navigation-rule>
-		<from-view-id>login.xhtml</from-view-id>
+		<from-view-id>/login.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>home</from-outcome>
 			<to-view-id>/home.xhtml</to-view-id>

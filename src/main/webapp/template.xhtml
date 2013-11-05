@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>This is teamplate page</title>
+</h:head>
+
+<body>
+	<table width="100%" border="1">
+		<tr>
+			<td colspan="2" align="center"><ui:insert name="header">
+					<ui:include src="header.xhtml" />
+				</ui:insert></td>
+		</tr>
+		<tr>
+			<td width="25%"><table width="100%" border="1">
+					<tr>
+						<td>menu1</td>
+					</tr>
+					<tr>
+						<td>menu2</td>
+					</tr>
+					<tr>
+						<td>menu3</td>
+					</tr>
+				</table>
+			</td>
+			<td width="50%" valign="top"><ui:insert name="body">
+					<ui:include src="body.xhtml" />
+				</ui:insert>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><ui:insert name="footer">
+					<ui:include src="footer.xhtml" />
+				</ui:insert></td>
+		</tr>
+	</table>
+</body>
+</html>

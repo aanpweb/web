@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"   
-xmlns:h="http://java.sun.com/jsf/html"
-xmlns:f="http://java.sun.com/jsf/core">
- 
-    <h:head>
-        <title>This is error page</title>
-    </h:head>
-   </html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>This is header page</title>
+</h:head>
+<body>
+	<ui:composition template="template.xhtml">
+		<ui:define name="body">
+			<table>
+				<tr>
+					<td>
+					<h:form>
+    	   				<h:inputText value="#{test.string1}"></h:inputText>
+    	   				<p:inputText required="true" label="Firstname"  
+                            value="#{test.string1}" />
+    	   				<h:commandButton value="Welcome Me" action="welcome"></h:commandButton>
+    				</h:form>	
+					</td>
+				</tr>
+			</table> 
+		</ui:define>
+	</ui:composition>
+</body>
+</html>
